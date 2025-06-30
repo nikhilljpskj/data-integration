@@ -3,8 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [latest, setLatest] = useState<Record<string, any> | null>(null);
-
+  const [latest, setLatest] = useState<Record<string, unknown> | null>(null);
 
   useEffect(() => {
     fetch('/api/latest')
