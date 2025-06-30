@@ -8,6 +8,7 @@ export default async function handler(req, res) {
   const data = req.body;
 
   try {
+    // use built-in fetch
     const forwardRes = await fetch("http://nikhiljp.42web.io/data-receiving/save.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -20,3 +21,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: 'Forwarding failed', details: err.message });
   }
 }
+
